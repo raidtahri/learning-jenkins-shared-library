@@ -1,5 +1,5 @@
 #!usr/bin/env groovy
-def call() {
+def call(String IMAGE_NAME, String IMAGE_TAG) {
           dir('06-hello-maven-shared-library-pipeline') {
                 withCredentials([usernamePassword(
                     credentialsId: 'dockerhub',
