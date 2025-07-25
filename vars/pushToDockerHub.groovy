@@ -1,5 +1,5 @@
 #!usr/bin/env groovy
-def call(String imageName, String imageTag) {
+def call(imageName, imageTag) {
 
 withCredentials([usernamePassword(
                     credentialsId: 'dockerhub',
