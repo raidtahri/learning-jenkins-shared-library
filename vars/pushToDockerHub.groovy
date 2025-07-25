@@ -1,5 +1,5 @@
 #!usr/bin/env groovy
-def call(String IMAGE_NAME, String IMAGE_TAG) {
+def call(String imageName, String imageTag) {
 
 withCredentials([usernamePassword(
                     credentialsId: 'dockerhub',
@@ -9,7 +9,7 @@ withCredentials([usernamePassword(
                     echo 'Pushing Docker Image to Docker Hub'
                     sh """
                         echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                        docker push ${DOCKER_USER}/${IMAGE_NAME}:${IMAGE_TAG}
+                        docker push ${DOCKER_USER}/${imageName}:${imageTag}
                         docker logout
                     """
                 }

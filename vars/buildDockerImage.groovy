@@ -7,7 +7,7 @@ def call(String IMAGE_NAME, String IMAGE_TAG) {
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
                     echo 'Building Docker Image'
-                    sh "docker build -t ${DOCKER_USER}/${IMAGE_NAME}:${IMAGE_TAG} ."
+                    sh "docker build -t ${DOCKER_USER}/${imageName}:${imageTag} ."
                 }
                 }
 }
