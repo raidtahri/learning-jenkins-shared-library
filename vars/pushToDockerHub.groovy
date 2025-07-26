@@ -13,4 +13,4 @@ withCredentials([usernamePassword(
                         docker logout
                     """
                 }
-
+}
