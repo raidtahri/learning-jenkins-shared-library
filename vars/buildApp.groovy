@@ -1,4 +1,4 @@
-#!usr/bin/env groovy
+#!/usr/bin/env groovy
 def call() {
 
           dir('06-hello-maven-shared-library-pipeline') {
